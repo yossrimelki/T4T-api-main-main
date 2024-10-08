@@ -10,6 +10,7 @@ const reclamationRoutes = require('./routes/reclamationRoutes');
 const areasRoutes = require('./routes/areasRoutes');
 const serviceRoutes = require('./routes/service');
 const languagesTRoutes = require('./routes/languagesT');
+const wisternPaymentRoutes = require('./routes/wisternPaymentRoutes');
 const fileUpload = require('express-fileupload');
 const cloudinary = require('cloudinary').v2;
 dotenv.config();
@@ -61,6 +62,7 @@ app.use('/api/reclamations', reclamationRoutes);
 app.use('/api/areas', areasRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/languagesT', languagesTRoutes);
+app.use('/api/wistern-payments', wisternPaymentRoutes);
 
 const server = http.createServer(app);
 server.listen(PORT, () => {
