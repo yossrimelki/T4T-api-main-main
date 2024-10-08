@@ -9,7 +9,7 @@ const {
 const router = express.Router();
 
 // Route to create a new WisternPayment
-router.post('/', newWisternPayment);
+router.post('/add', newWisternPayment);
 
 // Route to update WisternCode and status
 router.put('/confirm/:paymentId', updateWisternCode);
