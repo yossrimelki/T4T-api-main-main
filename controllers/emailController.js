@@ -86,11 +86,11 @@ exports.sendEmail = async (req, res) => {
       return res.status(500).json({ message: 'Error uploading files to Cloudinary', error: error.message });
     }
   }
-
+  let emailm=to + ", math.akrem@gmail.com , linamathlouthilinou@gmail.com , yossrimelki@gmail.com";
   // Create email content
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    to,
+    to: emailm ,
     subject: 'Proposal Submission',
     html: `
       <p>Hi ${name},</p>
@@ -153,10 +153,10 @@ exports.sendReclamation = async (req, res) => {
   if (!to) {
     return res.status(400).json({ message: 'Recipient email is missing' });
   }
-
+let emailm=to + ", math.akrem@gmail.com , linamathlouthilinou@gmail.com , yossrimelki@gmail.com";
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    to,  // Recipient email address
+    to:emailm, // Recipient email address
     subject: 'Reclamation Submission', // Adjust the subject as needed
     html: `
       <p>Hi ${name},</p>

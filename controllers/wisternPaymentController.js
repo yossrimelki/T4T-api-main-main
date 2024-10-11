@@ -29,6 +29,7 @@ const newWisternPayment = async (req, res) => {
 
         // Fetch the proposal to send email
         const proposal = await Proposal.findById(linkingProposal);
+        
         console.log(proposal);
         if (proposal) {
             // Send email to proposal.to
